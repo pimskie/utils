@@ -1,6 +1,8 @@
 
 const qs = sel => document.querySelector(sel);
 const map = (value, start1, stop1, start2, stop2) => ((value - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
+const clamp = (value, min, max) => Math.max(min, Math.min(number, max));
+
 
 const toRadian = degrees => degrees * Math.PI / 180;
 const toDegrees = radians => radians * 180 / Math.PI;
@@ -54,6 +56,7 @@ const wrappBBox = (vec, w, h) => {
 export {
 	qs,
 	map,
+	clamp,
 	toRadian,
 	toDegrees,
 	pixelIndex,
