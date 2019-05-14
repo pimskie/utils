@@ -12,7 +12,7 @@ const pixelIndex = (x, y, imageData) => (~~x + ~~y * imageData.width) * 4;
 const distanceBetween = (vec1, vec2) => Math.hypot(vec2.x - vec1.x, vec2.y - vec1.y);
 const angleBetween = (vec1, vec2) => Math.atan2(vec2.y - vec1.y, vec2.x - vec1.x);
 const randomArrayValue = arr => arr[Math.floor(Math.random() * arr.length)];
-const randomBetween = (min, max) => (Math.random() * (max - min + 1)) + min;
+const randomBetween = (min, max) => Math.random() * (max - min) + min;
 
 const randomGaussian = (mean = 0, sd = 1) => {
   let y1;
