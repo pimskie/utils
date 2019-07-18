@@ -51,7 +51,9 @@ const wrappBBox = (vec, w, h) => {
 		vec.y = h;
 	} else if (vec.y > h) {
 		vec.y = 0;
-	}
+  }
+
+  return vec;
 };
 
 export {
