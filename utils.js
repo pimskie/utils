@@ -1,7 +1,10 @@
 
 const qs = sel => document.querySelector(sel);
 const qsa = sel => Array.from(document.querySelectorAll(sel));
+
 const map = (value, start1, stop1, start2, stop2) => ((value - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
+const lerp = (norm, min, max) => (max - min) * norm + min;
+
 const clamp = (value, min, max) => Math.max(min, Math.min(value, max));
 const wrapArrayIndex = (index, array) => (index + 1 + array.length) % array.length;
 
@@ -59,7 +62,8 @@ const wrappBBox = (vec, w, h) => {
 export {
 	qs,
 	qsa,
-	map,
+  map,
+  lerp,
   clamp,
   wrapArrayIndex,
 	toRadian,
